@@ -12,8 +12,8 @@ class SearchBar extends React.Component{
     onFormSubmit = event => {
         //to prevent browser to submit automaticall, anytime the user submits.
         event.preventDefault();
-        // Make sure we call callback from parent component  
-        
+        // Make sure we call callback from parent component
+        this.props.onFormSubmit(this.state.term);
     };
 
     render(){
